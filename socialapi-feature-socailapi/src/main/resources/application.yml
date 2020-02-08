@@ -1,0 +1,10 @@
+# first run this command 
+#docker run  -d --name mysql --network=zia -e MYSQL_ROOT_PASSWORD=root -e MYSQL_DATABASE=demo -e MYSQL_USER=user -e MYSQL_PASSWORD=password  -p 3306:3306 mysql:8
+
+spring:
+  datasource:
+    #instead of localhost use container name
+    url: jdbc:mysql://mysql:3306/demo
+    username: user
+    password: password
+  jpa:    hibernate:      ddl-auto: update    show-sql: true
